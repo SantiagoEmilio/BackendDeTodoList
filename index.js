@@ -4,12 +4,12 @@ const cors = require('cors');
 
 const app = express();
 
-// Middleware para JSON
 app.use(express.json());
 
-// Configuración de CORS
 app.use(cors({
-    origin: ['http://127.0.0.1:5500'], // frontend permitido
+    origin: ['http://127.0.0.1:5500',
+            "https://santiagoemilio.github.io/TodoListselp", 
+    "https://santiagoemilio.github.io/TodoListselp/pages/dashboard"], // frontend permitido
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // agregué PUT y DELETE
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
